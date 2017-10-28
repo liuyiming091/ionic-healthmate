@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides class="image-slider" effect="coverflow" loop="true" slidesPerView="2">
+    <ion-slide *ngFor="let img of images">
+      <img src="assets/img/{{img}}" class="thumb-img" imageViewer/>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

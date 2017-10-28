@@ -1,0 +1,26 @@
+<!--
+  Generated template for the AccessPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Input your access code</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label stacked>Access Code</ion-label>
+    <ion-input type="text" [(ngModel)]="access" placeholder="Input your Access Code">
+    </ion-input>
+  </ion-item>
+  <div class="row">
+    <button class="button button-block" ion-button color='light' (click)="register()">Register</button>
+  </div>
+</ion-content>

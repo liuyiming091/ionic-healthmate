@@ -1,0 +1,16 @@
+page-public-profile {
+    ion-card {
+        text-align: center;
+    }
+
+    ion-card-header {
+        img {
+            margin: 10px auto;
+            width: 120px;
+            height: 120px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+        }
+    }
+}

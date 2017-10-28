@@ -1,0 +1,27 @@
+page-home {
+    .blurry-background {
+        img {
+            -webkit-filter: blur(10px);
+            -moz-filter: blur(10px);
+            -o-filter: blur(10px);
+            -ms-filter: blur(10px);
+            filter: blur(10px);
+        }
+    }
+
+    h1, h6{
+        text-align: center;
+    }
+
+    ion-thumbnail {
+        img {
+            float: right;
+            margin: 0px 3px;
+            width: 42px;
+            height: 42px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+        }
+    }
+}

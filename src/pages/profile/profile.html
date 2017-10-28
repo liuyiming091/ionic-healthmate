@@ -1,0 +1,148 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="blurry-background">
+  <img src="assets/img/7.jpg">
+</ion-content>
+
+<ion-content padding>
+
+  <ion-card>
+    <ion-card-header >
+      <!--<img src="http://via.placeholder.com/150x150">-->
+      <img src="{{srcpath}}" (click)="changeImage()">
+      <br/>
+      {{userEmail()}}
+      <br/>
+      <!-- <br/>
+      {{src}}
+      <br/>
+      {{srcpath}} -->
+    </ion-card-header>
+
+    <hr>
+
+    <ion-card-content>
+
+      <b>age</b>
+      <ion-item>
+        <ion-range min="1" max="80" pin="true" [(ngModel)]="age" color="primary">
+          <ion-icon range-left small color="primary" name="football"></ion-icon>
+          <ion-icon range-right color="primary" name="football"></ion-icon>
+        </ion-range>
+      </ion-item>
+
+      <b>Weight (kg)</b>
+      <ion-item>
+        <ion-range min="40" max="140" pin="true" [(ngModel)]="weight" color="primary">
+          <ion-icon range-left small name="body"></ion-icon>
+          <ion-icon range-right name="body"></ion-icon>
+        </ion-range>
+      </ion-item>
+
+      <b>Height (cm)</b>
+      <ion-item>
+        <ion-range min="140" max="220" pin="true" [(ngModel)]="height" color="primary">
+          <ion-icon range-left small name="man"></ion-icon>
+          <ion-icon range-right name="man"></ion-icon>
+        </ion-range>
+      </ion-item>
+ 
+      <hr> 
+
+      <ion-item>
+        <ion-label>Gender</ion-label>
+        <ion-select [(ngModel)]="gender">
+          <ion-option value="f">Female</ion-option>
+          <ion-option value="m">Male</ion-option>
+        </ion-select>
+      </ion-item>
+
+       <ion-item>
+        <ion-label>Birthday</ion-label>
+        <ion-select [(ngModel)]="day">
+          <ion-option value="1">01</ion-option>
+          <ion-option value="2">02</ion-option>
+          <ion-option value="3">03</ion-option>
+          <ion-option value="4">04</ion-option>
+          <ion-option value="5">05</ion-option>
+          <ion-option value="6">06</ion-option>
+          <ion-option value="7">07</ion-option>
+          <ion-option value="8">08</ion-option>
+          <ion-option value="9">09</ion-option>
+          <ion-option value="10">10</ion-option>
+          <ion-option value="11">11</ion-option>
+          <ion-option value="12">12</ion-option>
+          <ion-option value="13">13</ion-option>
+          <ion-option value="14">14</ion-option>
+          <ion-option value="15">15</ion-option>
+          <ion-option value="16">16</ion-option>
+          <ion-option value="17">17</ion-option>
+          <ion-option value="18">18</ion-option>
+          <ion-option value="19">19</ion-option>
+          <ion-option value="20">20</ion-option>
+          <ion-option value="21">21</ion-option>
+          <ion-option value="22">22</ion-option>
+          <ion-option value="23">23</ion-option>
+          <ion-option value="24">24</ion-option>
+          <ion-option value="25">25</ion-option>
+          <ion-option value="26">26</ion-option>
+          <ion-option value="27">27</ion-option>
+          <ion-option value="28">28</ion-option>
+          <ion-option value="29">29</ion-option>
+          <ion-option value="30">30</ion-option>
+          <ion-option value="31">31</ion-option>
+        </ion-select>
+        <ion-select [(ngModel)]="month">
+          <ion-option value="1">January</ion-option>
+          <ion-option value="2">February</ion-option>
+          <ion-option value="3">March</ion-option>
+          <ion-option value="4">April</ion-option>
+          <ion-option value="5">May</ion-option>
+          <ion-option value="6">June</ion-option>
+          <ion-option value="7">July</ion-option>
+          <ion-option value="8">August</ion-option>
+          <ion-option value="9">September</ion-option>
+          <ion-option value="10">October</ion-option>
+          <ion-option value="11">November</ion-option>
+          <ion-option value="12">December</ion-option>
+        </ion-select>
+        <!--
+        <ion-select [(ngModel)]="year">
+          <ion-option value="1989">1989</ion-option>
+          <ion-option value="1990">1990</ion-option>
+          <ion-option value="1991">1991</ion-option>
+          <ion-option value="1992">1992</ion-option>
+          <ion-option value="1993">1993</ion-option>
+          <ion-option value="1994">1994</ion-option>
+          <ion-option value="1995">1995</ion-option>
+          <ion-option value="1996">1996</ion-option>
+          <ion-option value="1997">1997</ion-option>
+          <ion-option value="1998">1998</ion-option>
+          <ion-option value="1999">1999</ion-option>
+        </ion-select>
+        -->
+      </ion-item>
+      
+      <br/><br/>
+      <button ion-button block clear (click)="saveUserInfo()">
+        Save my info
+      </button> 
+      <button ion-button block clear (click)="goToSettings()">
+        Change settings
+      </button> 
+      <br/>
+      <button ion-button block clear (click)="goToResetPassword()">
+        Reset my password
+      </button> 
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

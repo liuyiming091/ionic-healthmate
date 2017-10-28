@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="blurry-background">
+  <img src="assets/img/1.jpg">
+</ion-content>
+
+<ion-content padding>
+  <ion-card *ngIf="changingImage" >
+    
+    <ion-card-header>
+      <img-cropper [image]="data" [settings]="cropperSettings"></img-cropper>
+    </ion-card-header>
+
+    <ion-card-content>
+      <br/><br/>
+      <button ion-button block clear (click)="saveProfileImage()">
+        Save Image
+      </button> 
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card *ngIf="!changingImage">
+
+    <ion-card-header>
+      <!--<img src="http://via.placeholder.com/150x150" (click)="uploadImage()">-->
+      <img src="{{srcpath}}" id="image" (click)="uploadImage()">
+    </ion-card-header>
+
+
+    <ion-card-content> 
+    <hr>
+     
+      <ion-item>
+        <ion-label>Notifications</ion-label>
+        <ion-select [(ngModel)]="notifications" interface="popover">
+          <ion-option value="enable">Enable</ion-option>
+          <ion-option value="mute">Mute</ion-option>
+          <ion-option value="mute_week">Mute for a week</ion-option>
+          <ion-option value="mute_year">Mute for a year</ion-option>
+          <ion-option value="mute_forever">Mute forever</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Extra options</ion-label>
+        <ion-checkbox [(ngModel)]="extra_options" color="primary" disabled="true"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Stepcounter</ion-label>
+        <ion-checkbox [(ngModel)]="stepcounter" color="primary" disabled="true"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Auto updates</ion-label>
+        <ion-checkbox [(ngModel)]="auto_updates" color="primary" checked="false"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Share data</ion-label>
+        <ion-checkbox [(ngModel)]="share_data" color="primary" checked="true"></ion-checkbox>
+      </ion-item>
+
+      <br/><br/>
+      <button ion-button block clear (click)="saveUserSettings()">
+        Save settings
+      </button> 
+      
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

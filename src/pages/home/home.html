@@ -1,0 +1,31 @@
+<ion-header *ngIf="authProvider.isAuthenticated();">
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <!-- <ion-title>Health App</ion-title>-->
+    <ion-thumbnail item-start>
+      <img src="assets/img/1.jpg" (click)="goToProfile()">
+    </ion-thumbnail>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="blurry-background">
+  <img src="assets/img/5.jpg">
+</ion-content>
+
+<ion-content padding>
+
+  <div *ngIf="authProvider.isAuthenticated();">
+    <h6>Welcome {{userEmail()}}!</h6>
+  </div>
+  
+  <div *ngIf="!authProvider.isAuthenticated();">
+    <h1>Welcome to Health App</h1>
+
+    <button ion-button block color="primary" (click)="goToSignup()">Create an account</button>
+    <button ion-button block color="primary" (click)="goToSignin()">Login with an account</button>
+    <br/><br/>
+    
+  </div>
+</ion-content>

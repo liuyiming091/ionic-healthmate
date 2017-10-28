@@ -1,0 +1,133 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Explore other users</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-refresher (ionRefresh)="doRefresh($event);">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+  
+  <ion-card>
+    <ion-list>
+
+      <!-- Main Item -->
+      <ion-item-sliding>
+
+        <ion-item>
+          <ion-thumbnail item-start>
+            <!-- <img src="http://via.placeholder.com/150x150"> -->
+            <img src="assets/img/1.jpg" (click)="goToPublicProfile()">
+          </ion-thumbnail>
+          <ion-label (click)="goToPublicProfile()">Testuser01</ion-label>
+          <!--
+          <div *ngIf="isFollowing; then unfollowButton else followButton">
+              button renders here
+          </div>
+          <button ion-button item-end color="primary">Follow (29)</button>
+          -->
+        </ion-item>
+
+        <ion-item-options side="left">
+          <button ion-button color="secondary" (click)="goToPublicProfile()">
+            <ion-icon name="contact"></ion-icon>
+            View
+          </button>
+        </ion-item-options>
+    
+        <ion-item-options side="right">
+          <button ion-button color="primary">
+            <ion-icon name="person-add"></ion-icon>
+            Follow
+          </button>
+        </ion-item-options>
+
+      </ion-item-sliding>
+
+    <!-- All extra placeholder cards -->
+      <ion-item-sliding>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="assets/img/2.jpg">
+          </ion-thumbnail>
+          <ion-label>Testuser02</ion-label>
+        </ion-item>
+        <ion-item-options side="left">
+          <button ion-button color="secondary">
+            <ion-icon name="contact"></ion-icon>
+            View
+          </button>
+        </ion-item-options>
+        <ion-item-options side="right">
+          <button ion-button color="primary">
+            <ion-icon name="person-add"></ion-icon>
+            Follow
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+
+      <ion-item-sliding>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="assets/img/7.jpg">
+          </ion-thumbnail>
+          <ion-label>Testuser05</ion-label>
+        </ion-item>
+        <ion-item-options side="left">
+          <button ion-button color="secondary">
+            <ion-icon name="contact"></ion-icon>
+            View
+          </button>
+        </ion-item-options>
+        <ion-item-options side="right">
+          <button ion-button color="primary">
+            <ion-icon name="person-add"></ion-icon>
+            Follow
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+
+      <ion-item-sliding>
+          <ion-item>
+            <ion-thumbnail item-start>
+              <img src="assets/img/3.jpg">
+            </ion-thumbnail>
+            <ion-label>Testuser24</ion-label>
+          </ion-item>
+          <ion-item-options side="left">
+            <button ion-button color="secondary">
+              <ion-icon name="contact"></ion-icon>
+              View
+            </button>
+          </ion-item-options>
+          <ion-item-options side="right">
+            <button ion-button color="primary">
+              <ion-icon name="person-add"></ion-icon>
+              Follow
+            </button>
+          </ion-item-options>
+        </ion-item-sliding>
+
+    </ion-list>
+  </ion-card>
+
+  <!-- Follow Unfollow Temporary -->
+  <ng-template #followButton>
+    <button ion-button block color="secondary" (click)="toggleFollow()">Follow</button>
+  </ng-template>
+
+  <ng-template #unfollowButton>
+    <button ion-button block color="primary" (click)="toggleFollow()">Unfollow</button>
+  </ng-template>
+
+</ion-content>

@@ -1,0 +1,25 @@
+page-feed {
+    .card-header-md {
+        padding: 0px 16px;
+
+        img {
+            float: left;
+            margin: 10px 0px;
+            width: 50px;
+            height: 50px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+        }
+    }
+
+    .card-md { 
+        p {
+            float: right;
+            margin: 22px 0px;
+        }
+
+    }
+
+    
+}

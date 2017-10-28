@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My plans settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="blurry-background">
+  <img src="assets/img/3.jpg">
+</ion-content>
+
+<ion-content padding>
+
+  <ion-card>
+    
+    <ion-card-header>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item>
+        <ion-label>Strength training</ion-label>
+        <ion-checkbox [(ngModel)]="strength_training" color="primary" checked="true"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Cycling</ion-label>
+        <ion-checkbox [(ngModel)]="cycling" color="primary" checked="true"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Running</ion-label>
+        <ion-checkbox [(ngModel)]="running" color="primary" checked="true"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Other</ion-label>
+        <ion-checkbox [(ngModel)]="other" color="primary" checked="false"></ion-checkbox>
+      </ion-item>
+
+      <br/><br/>
+      <button ion-button block clear (click)="savePlanSettings()">
+        Save settings
+      </button> 
+
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,48 @@
+<ion-menu [content]="content" id="menu1">
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <div *ngIf="authProvider.isAuthenticated(); else signin">
+      <button menuClose="menu1" ion-item *ngFor="let p of pages" (click)="openAuthPages(p)">
+        {{p.title}}
+      </button>
+
+      <button menuClose="menu1" ion-item (click)="onSignOut()">
+        Sign out
+      </button>
+    </div>
+  </ion-list>
+</ion-content>
+</ion-menu>
+
+<ion-menu [content]="content" id="menu2">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <div *ngIf="authProvider.isAuthenticated(); else signin">
+        <button menuClose="menu2" ion-item *ngFor="let p of doctorPages" (click)="openAuthPages(p)">
+          {{p.title}}
+        </button>
+        <button menuClose="menu2" ion-item (click)="onSignOut()">
+            Sign out
+        </button>
+        
+      </div>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<!-- <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav> -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+<!-- <ion-nav [root]="root2"></ion-nav> -->

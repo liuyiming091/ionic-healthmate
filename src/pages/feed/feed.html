@@ -1,0 +1,164 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>The feed</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-refresher (ionRefresh)="doRefresh($event);">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <!-- Main card -->
+  <ion-card>
+
+    <ion-card-header>
+
+      <ion-avatar (click)="goToPublicProfile()">
+        <img src="assets/img/1.jpg">
+      </ion-avatar>
+      <p><b>
+        Testuser01
+      </b></p>
+
+    </ion-card-header>
+
+    <img src="assets/img/5.jpg">
+
+    <ion-row no-padding>
+      <ion-col>
+        <a ion-button icon-left clear small color="primary" icon-start>
+          <ion-icon name='star'></ion-icon>
+          8
+        </a>
+      </ion-col>
+      <ion-col>
+        <a ion-button icon-left clear small color="primary" icon-start>
+          <ion-icon name='share'></ion-icon>
+          3
+        </a>
+      </ion-col>
+      <ion-col>
+        <a ion-button icon-right clear small color="primary" icon-start>
+          <ion-icon name='time'></ion-icon>
+          11m ago
+        </a>
+      </ion-col>
+    </ion-row>
+
+    <ion-card-content>
+      Quisque semper condimentum dolor, non consequat diam varius vel. #condimentum #dolor
+    </ion-card-content>
+
+  </ion-card>
+
+  <!-- All extra placeholder cards -->
+  <ion-card>
+    <ion-card-header>
+      <img src="assets/img/2.jpg">
+      <p><b>
+        Testuser02
+      </b></p>
+    </ion-card-header>
+    <img src="assets/img/3.jpg">
+    <ion-row no-padding>
+      <ion-col>
+        <a ion-button clear small color="secondary" icon-start>
+          <ion-icon name='star'></ion-icon>
+          21
+        </a>
+      </ion-col>
+      <ion-col>
+        <a ion-button icon-left clear small color="secondary" icon-start>
+          <ion-icon name='share'></ion-icon>
+          9
+        </a>
+      </ion-col>
+      <ion-col>
+        <a ion-button icon-right clear small color="primary" icon-start>
+          <ion-icon name='time'></ion-icon>
+          15m ago
+        </a>
+      </ion-col>
+    </ion-row>
+    <ion-card-content>
+      Quisque semper condimentum dolor, non consequat diam varius vel. #condimentum #dolor
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <img src="assets/img/2.jpg">
+      <p><b>
+        Testuser02
+      </b></p>
+    </ion-card-header>
+    <img src="assets/img/4.jpg">
+    <ion-row no-padding>
+      <ion-col>
+        <a ion-button clear small color="primary" icon-start>
+          <ion-icon name='star'></ion-icon>
+          34
+        </a>
+      </ion-col>
+      <ion-col>
+        <a ion-button icon-left clear small color="secondary" icon-start>
+          <ion-icon name='share'></ion-icon>
+          15
+        </a>
+      </ion-col>
+      <ion-col>
+        <a ion-button icon-right clear small color="primary" icon-start>
+          <ion-icon name='time'></ion-icon>
+          1h ago
+        </a>
+      </ion-col>
+    </ion-row>
+    <ion-card-content>
+      Quisque semper condimentum dolor, non consequat diam varius vel. #condimentum #dolor
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <img src="assets/img/7.jpg">
+      <p><b>
+        Testuser05
+      </b></p>
+    </ion-card-header>
+    <img src="assets/img/2.jpg">
+    <ion-row no-padding>
+      <ion-col>
+        <a ion-button clear small color="secondary" icon-start>
+          <ion-icon name='star'></ion-icon>
+          89
+        </a>
+      </ion-col>
+      <ion-col>
+        <a ion-button icon-left clear small color="secondary" icon-start>
+          <ion-icon name='share'></ion-icon>
+          65
+        </a>
+      </ion-col>
+      <ion-col>
+        <a ion-button icon-right clear small color="primary" icon-start>
+          <ion-icon name='time'></ion-icon>
+          2w ago
+        </a>
+      </ion-col>
+    </ion-row>
+    <ion-card-content>
+      Quisque semper condimentum dolor, non consequat diam varius vel. #condimentum #dolor
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

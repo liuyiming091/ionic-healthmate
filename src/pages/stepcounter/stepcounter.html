@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Stepcounter</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="blurry-background">
+  <img src="assets/img/2.jpg">
+</ion-content>
+
+<ion-content class="content" padding>
+  <button ion-button (click)="startStepcounter()">Start</button> <br />
+  <button ion-button (click)="stopStepcounter()">Stop</button> <br />
+  <button ion-button (click)="getTodayStepcounter()">Get today</button> <br />
+  <button ion-button (click)="historyStepcounter()">History</button>
+</ion-content>
