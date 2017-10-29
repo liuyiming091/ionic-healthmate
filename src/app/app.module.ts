@@ -41,6 +41,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { Stepcounter } from '@ionic-native/stepcounter';
 import { CameraPreview } from '@ionic-native/camera-preview';
 
+import { NgCalendarModule  } from 'ionic2-calendar';
+
 // Services - Providers
 import { PlansProvider } from '../providers/plans/plans.provider';
 import { UploadProvider } from '../providers/upload/upload.provider';
@@ -72,9 +74,12 @@ import { FeedProvider } from '../providers/feed/feed.provider';
     DoctorTimetablePage,
     GeneralRecommendationPage,
     AddRecommendationPage,
-    AddAnnnoucementPage
+    AddAnnnoucementPage,
+    DoctorTimetablePage
   ],
   imports: [
+    NgCalendarModule,
+    
     BrowserModule,
     HttpClientModule,
     FormsModule,
@@ -105,7 +110,8 @@ import { FeedProvider } from '../providers/feed/feed.provider';
     DoctorTimetablePage,
     GeneralRecommendationPage,
     AddRecommendationPage,
-    AddAnnnoucementPage
+    AddAnnnoucementPage,
+    DoctorTimetablePage
 
   ],
   providers: [
