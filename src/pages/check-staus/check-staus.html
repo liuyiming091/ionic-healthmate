@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button [menuToggle]="activeMenu">
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Status</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="blurry-background">
+    <img src="assets/img/7.jpg">
+</ion-content>
+
+<ion-content padding>
+    <ion-card>
+        <ion-card-header>
+            <div align="center" vertical-align="middle">
+                Health Result
+            </div>
+
+            <hr>
+        </ion-card-header>
+        <ion-card-content>
+            <div align="center" vertical-align="middle">
+                User's Marks: {{finalsocre}}
+            </div>
+            <br>
+        </ion-card-content>
+        <canvas id="myChart" width="100" height="100"></canvas>
+        <hr>
+        <br>
+        <canvas id="myChange" width="100" height="100"></canvas>
+        <br>
+        <hr>
+        <br>
+        <div align="center" vertical-align="middle">
+            User's Height: {{height}} | User's Weight: {{weight}}
+        </div>
+        <br>
+        <hr>
+        <br>
+        <button ion-button block color="primary" (click)="giveRecommendation()">Give Recommendation </button>
+    </ion-card>
+
+</ion-content>

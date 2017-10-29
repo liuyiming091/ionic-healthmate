@@ -19,8 +19,12 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item *ngFor="let item of items">
-      {{ item.email }}    
+    <ion-item *ngFor="let item of items" (click)="onclick(item.email)">
+      <ion-avatar item-start>
+        <img src="assets/ava/1.png">
+      </ion-avatar>
+      <!-- <h2>{{ item.email }}</h2>   -->
+      <h2>{{item.email}}</h2>
     </ion-item>
   </ion-list>
   

@@ -1,3 +1,10 @@
+import { UserTimetablePage } from './../pages/user-timetable/user-timetable';
+import { TechAboutPage } from './../pages/tech-about/tech-about';
+import { UserAdvicePage } from './../pages/user-advice/user-advice';
+import { UserAnnoucementPage } from './../pages/user-annoucement/user-annoucement';
+import { UserAboutPage } from './../pages/user-about/user-about';
+import { GiveRecommendationPage } from './../pages/give-recommendation/give-recommendation';
+import { CheckStausPage } from './../pages/check-staus/check-staus';
 import { AddAnnnoucementPage } from './../pages/add-annnoucement/add-annnoucement';
 import { AddRecommendationPage } from './../pages/add-recommendation/add-recommendation';
 import { GeneralRecommendationPage } from './../pages/general-recommendation/general-recommendation';
@@ -75,11 +82,18 @@ import { FeedProvider } from '../providers/feed/feed.provider';
     GeneralRecommendationPage,
     AddRecommendationPage,
     AddAnnnoucementPage,
-    DoctorTimetablePage
+    DoctorTimetablePage,
+    CheckStausPage,
+    GiveRecommendationPage,
+    UserAboutPage,
+    UserAnnoucementPage,
+    UserAdvicePage,
+    TechAboutPage,
+    UserTimetablePage
   ],
   imports: [
     NgCalendarModule,
-    
+
     BrowserModule,
     HttpClientModule,
     FormsModule,
@@ -111,7 +125,14 @@ import { FeedProvider } from '../providers/feed/feed.provider';
     GeneralRecommendationPage,
     AddRecommendationPage,
     AddAnnnoucementPage,
-    DoctorTimetablePage
+    DoctorTimetablePage,
+    CheckStausPage,
+    GiveRecommendationPage,
+    UserAboutPage,
+    UserAnnoucementPage,
+    UserAdvicePage,
+    TechAboutPage,
+    UserTimetablePage
 
   ],
   providers: [
@@ -127,7 +148,8 @@ import { FeedProvider } from '../providers/feed/feed.provider';
     UsersProvider,
     NutritionProvider,
     FollowProvider,
-    FeedProvider
+    FeedProvider,
+  
   ]
 })
 export class AppModule {}

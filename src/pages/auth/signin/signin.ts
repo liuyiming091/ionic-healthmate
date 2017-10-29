@@ -15,6 +15,9 @@ import { ResetPasswordPage } from '../reset-password/reset-password';
   templateUrl: 'signin.html',
 })
 export class SigninPage {
+  User;
+  Doctor;
+  TecTeam;
   public loginForm: FormGroup;
   public loading: Loading;
   constructor(public navCtrl: NavController, 
@@ -39,8 +42,13 @@ export class SigninPage {
       )
       .then( authData => {
         this.loading.dismiss().then( () => {
+          if(this.User==true){
+            this.navCtrl.setRoot(HomePage);
+          }
+          if(this.Doctor==true){
           this.navCtrl.setRoot(DoctorHomePage);
-          // this.navCtrl.setRoot(HomePage);
+          }
+          // 
         });
       }, error => {
         this.loading.dismiss().then( () => {

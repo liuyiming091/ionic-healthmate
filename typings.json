@@ -1,5 +1,8 @@
 {
   "globalDependencies": {
     "firebase": "registry:dt/firebase#2.4.1+20160510002910"
+  },
+  "dependencies": {
+    "chart.js": "registry:npm/chart.js#2.1.4+20160615174920"
   }
 }

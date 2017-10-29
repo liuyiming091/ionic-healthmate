@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Annoucement</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content class="blurry-background">
+    <img src="assets/img/7.jpg">
+  </ion-content>
+  
+  <ion-content padding >
+    <ion-card *ngFor="let item of items">
+      <ion-card-content>
+        <p>{{item.title}}</p>
+      </ion-card-content>
+      <hr/>
+      <ion-card-content >
+        <p> {{ item.content }}  </p> 
+      </ion-card-content>
+    </ion-card>
+  
+  </ion-content>

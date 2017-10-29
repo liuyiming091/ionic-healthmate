@@ -1,6 +1,6 @@
 import { StatusPage } from './../status/status';
 import { Component } from '@angular/core';
-import { AlertController, NavController } from 'ionic-angular';
+import { AlertController, NavController, MenuController } from 'ionic-angular';
 import * as firebase from 'firebase';
 
 import { AuthProvider } from '../../providers/auth/auth.provider';
@@ -17,11 +17,20 @@ import { SignupPage } from '../auth/signup/signup';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  activeMenu: String;
   constructor(
     public alertCtrl: AlertController,
     public navCtrl: NavController,
-    public authProvider: AuthProvider) 
+    public authProvider: AuthProvider,
+    public menu:MenuController) 
   {
+    this.menuActive();
+  }
+
+  menuActive(){
+    this.activeMenu='menu1';
+    this.menu.enable(true, 'menu1');
+    this.menu.enable(false, 'menu2');
   }
 
   userEmail() {

@@ -5,18 +5,33 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>usrReccomendation</ion-title>
+    <ion-navbar color="primary">
+          <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+    <ion-title>Reccomendation from doctors</ion-title>
   </ion-navbar>
-
 </ion-header>
-
+<ion-content class="blurry-background">
+    <img src="assets/img/7.jpg">
+  </ion-content>
 
 <ion-content padding>
-        <ion-card *ngFor="let item of items" (click)="goto()">
-          {{ item.content }}    
+        <ion-card *ngFor="let item of items">
+          <ion-item>
+              <h2>
+                  {{item.author}}
+                </h2>
+                <p>
+                  {{item.date}}
+                </p>
+          </ion-item>
+          <hr>
+          <ion-card-content>
+            <p>{{ item.content }}</p>
+          </ion-card-content>
+           
         </ion-card>
    
-  <button ion-button (click)="button()">add recommendation</button>
+  <!-- <button ion-button (click)="button()">add recommendation</button> -->
 </ion-content>

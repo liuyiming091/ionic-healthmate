@@ -56,14 +56,6 @@ export class ProfileSettingsPage implements OnInit {
 
   ngOnInit() {
     // getUserSettings
-    firebase.database().ref().child(`userProfiles/${this.uid}/profile/settings`).once('value').then((snap) => {
-      this.notifications = snap.val().notifications;
-      this.extra_options = snap.val().extra_options;
-      this.stepcounter = snap.val().stepcounter;
-      this.auto_updates = snap.val().auto_updates;
-      this.share_data = snap.val().share_data;
-    });
-
     firebase.database().ref().child(`userProfiles/${this.uid}/profile/image`).on('value', snap => {
       this.src=snap.val().filename;
       this.path ="gs://healthmate-fea30.appspot.com/profile/"+this.src;
@@ -154,7 +146,8 @@ export class ProfileSettingsPage implements OnInit {
     let alert = this.alertCtrl.create({
       title: 'Profile image is saved'
     });
-    alert.present()
+    alert.present();
+    this.navCtrl.setRoot(ProfilePage);
   }
 
   deleteProfileImage() {

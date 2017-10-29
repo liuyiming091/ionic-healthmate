@@ -1,3 +1,8 @@
+import { UserTimetablePage } from './../pages/user-timetable/user-timetable';
+import { TechAboutPage } from './../pages/tech-about/tech-about';
+import { UserAboutPage } from './../pages/user-about/user-about';
+import { UserAdvicePage } from './../pages/user-advice/user-advice';
+import { UserAnnoucementPage } from './../pages/user-annoucement/user-annoucement';
 import { GeneralRecommendationPage } from './../pages/general-recommendation/general-recommendation';
 import { DoctorTimetablePage } from './../pages/doctor-timetable/doctor-timetable';
 import { DoctorAnnoucementPage } from './../pages/doctor-annoucement/doctor-annoucement';
@@ -45,9 +50,11 @@ export class MyApp implements OnInit {
     this.pages = [
       { title: 'status', component: StatusPage },
       { title: 'My profile', component: ProfilePage },
+      { title: 'TimeTable', component:UserTimetablePage},
       { title: 'Recommendations', component: UsrReccomendationPage },
-      { title: 'Fitness plans', component: PlansPage },
-      { title: 'Nutrition', component: NutritionPage },
+      { title: 'Annoucements', component: UserAnnoucementPage},
+      { title: 'General Advice', component: UserAdvicePage },
+      { title: 'About', component: UserAboutPage},
     ];
 
 
@@ -55,7 +62,8 @@ export class MyApp implements OnInit {
       { title: 'users', component: UserListPage},
       { title: 'Announcements', component: DoctorAnnoucementPage },
       { title: 'Timetable', component: DoctorTimetablePage },
-      { title: 'Recommendations', component: GeneralRecommendationPage }
+      { title: 'Recommendations', component: GeneralRecommendationPage },
+      { title: 'About', component: TechAboutPage }
     ];
 
   }

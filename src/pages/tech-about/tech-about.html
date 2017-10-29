@@ -1,0 +1,339 @@
+<!--
+  Generated template for the TechAboutPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>About</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-card>
+        
+     <ion-item>
+            <h2>Login</h2>
+            <p>All type of user</p>
+     </ion-item>
+      
+        
+     <ion-card-content id="id1">
+            <p>Input your access code and password</p>
+      </ion-card-content>
+
+          <ion-row>
+            <ion-col>
+              <button ion-button icon-left clear small ion-button (click)="edit1()">
+                <div>Modify</div>
+              </button>
+            </ion-col>
+            <ion-col>
+              <button ion-button icon-left clear small ion-button(click)="confirm1()">
+                <div>Confirm</div>
+              </button>
+            </ion-col>
+          </ion-row>
+    </ion-card>
+        <!-- <ion-card>
+            
+              <ion-item>
+                <ion-avatar>
+                </ion-avatar>
+                <h2>Apply access code</h2>
+                <p>All type of user</p>
+              </ion-item>
+          
+            
+              <ion-card-content id="id2">
+                <p>Access code is used for login your individual account.The access code will be sent by your email.</p>
+              </ion-card-content>
+            
+              <ion-row>
+                <ion-col>
+                  <button ion-button icon-left clear small ion-button (click)="edit2()">
+                    <div>Modify</div>
+                  </button>
+                </ion-col>
+                <ion-col>
+                  <button ion-button icon-left clear small ion-button(click)="confirm2()">
+                    <div>Confirm</div>
+                  </button>
+                </ion-col>
+              </ion-row>
+            </ion-card>
+            <ion-card>
+                
+                  <ion-item>
+                    <ion-avatar>
+                    </ion-avatar>
+                    <h2>User profile</h2>
+                    <p>User</p>
+                  </ion-item>
+              
+                
+                  <ion-card-content id="id3">
+                    <p>User input their personal information.</p>
+                  </ion-card-content>
+                
+                  <ion-row>
+                    <ion-col>
+                      <button ion-button icon-left clear small ion-button (click)="edit3()">
+                        <div>Modify</div>
+                      </button>
+                    </ion-col>
+                    <ion-col>
+                      <button ion-button icon-left clear small ion-button(click)="confirm3()">
+                        <div>Confirm</div>
+                      </button>
+                    </ion-col>
+                  </ion-row>
+                </ion-card>
+                
+                <ion-card>
+                    
+                      <ion-item>
+               
+                        <h2>Timetable management</h2>
+                        <p>User</p>
+                      </ion-item>
+                      <ion-card-content id="id4">
+                        <p>Userinput their own healthcare schedule and medicine date.</p>
+                      </ion-card-content>
+
+                      <ion-row>
+                        <ion-col>
+                            <button ion-button icon-left clear small ion-button (click)="edit4()">
+                              <div>Modify</div>
+                            </button>
+                          </ion-col>
+                          
+                          <ion-col>
+                            <button ion-button icon-left clear small ion-button(click)="confirm4()">
+                            <div>Confirm</div>
+                            </button>
+                         </ion-col>
+                    </ion-row>
+                  </ion-card>
+                    <ion-card>
+                        
+                          <ion-item>
+                            <ion-avatar>
+                            </ion-avatar>
+                            <h2>User Notification</h2>
+                            <p>User</p>
+                          </ion-item>
+                      
+                        
+                          <ion-card-content id="id5">
+                            <p>User sets alarm for reminding their healthcare schedule and medicine date.</p>
+                          </ion-card-content>
+                        
+                          <ion-row>
+                            <ion-col>
+                              <button ion-button icon-left clear small ion-button (click)="edit5()">
+                                <div>Modify</div>
+                              </button>
+                            </ion-col>
+                            <ion-col>
+                              <button ion-button icon-left clear small ion-button(click)="confirm5()">
+                                <div>Confirm</div>
+                              </button>
+                            </ion-col>
+                          </ion-row>
+                        </ion-card>
+                        <ion-card>
+                            
+                              <ion-item>
+                                <ion-avatar>
+                                </ion-avatar>
+                                <h2>Check recommendation</h2>
+                                <p>All type of user</p>
+                              </ion-item>
+                          
+                            
+                              <ion-card-content id="id6">
+                                <p>User check personal healthy recommendation based on their own physical condition.</p>
+                              </ion-card-content>
+                            
+                              <ion-row>
+                                <ion-col>
+                                  <button ion-button icon-left clear small ion-button (click)="edit6()">
+                                    <div>Modify</div>
+                                  </button>
+                                </ion-col>
+                                <ion-col>
+                                  <button ion-button icon-left clear small ion-button(click)="confirm6()">
+                                    <div>Confirm</div>
+                                  </button>
+                                </ion-col>
+                              </ion-row>
+                            </ion-card>
+                            <ion-card>
+                                
+                                  <ion-item>
+                                    <ion-avatar>
+                                    </ion-avatar>
+                                    <h2>Emergency</h2>
+                                    <p>User</p>
+                                  </ion-item>
+                              
+                                
+                                  <ion-card-content id="id7">
+                                    <p>User could see information of emergency centre, such as TEL and address.</p>
+                                  </ion-card-content>
+                                
+                                  <ion-row>
+                                    <ion-col>
+                                      <button ion-button icon-left clear small ion-button (click)="edit7()">
+                                        <div>Modify</div>
+                                      </button>
+                                    </ion-col>
+                                    <ion-col>
+                                      <button ion-button icon-left clear small ion-button(click)="confirm7()">
+                                        <div>Confirm</div>
+                                      </button>
+                                    </ion-col>
+                                  </ion-row>
+                                </ion-card>
+                                <ion-card>
+                                    
+                                      <ion-item>
+                                        <ion-avatar>
+                                        </ion-avatar>
+                                        <h2>Publish Recommendation</h2>
+                                        <p>Doctor</p>
+                                      </ion-item>
+                                  
+                                    
+                                      <ion-card-content id="id8">
+                                        <p>Doctor publish new recommendation</p>
+                                      </ion-card-content>
+                                    
+                                      <ion-row>
+                                        <ion-col>
+                                          <button ion-button icon-left clear small ion-button (click)="edit8()">
+                                            <div>Modify</div>
+                                          </button>
+                                        </ion-col>
+                                        <ion-col>
+                                          <button ion-button icon-left clear small ion-button(click)="confirm8()">
+                                            <div>Confirm</div>
+                                          </button>
+                                        </ion-col>
+                                      </ion-row>
+                                    </ion-card>
+                                    <ion-card>
+                                        
+                                          <ion-item>
+                                            <ion-avatar>
+                                            </ion-avatar>
+                                            <h2>Check user's health status</h2>
+                                            <p>Doctor</p>
+                                          </ion-item>
+                                      
+                                        
+                                          <ion-card-content id="id9">
+                                            <p>Doctor check user's up-to-date health status.</p>
+                                          </ion-card-content>
+                                        
+                                          <ion-row>
+                                            <ion-col>
+                                              <button ion-button icon-left clear small ion-button (click)="edit9()">
+                                                <div>Modify</div>
+                                              </button>
+                                            </ion-col>
+                                            <ion-col>
+                                              <button ion-button icon-left clear small ion-button(click)="confirm9()">
+                                                <div>Confirm</div>
+                                              </button>
+                                            </ion-col>
+                                          </ion-row>
+                                        </ion-card>
+                                        <ion-card>
+                                            
+                                              <ion-item>
+                                                <ion-avatar>
+                                                </ion-avatar>
+                                                <h2>Doctor Notification</h2>
+                                                <p>Doctor</p>
+                                              </ion-item>
+                                          
+                                            
+                                              <ion-card-content id="id10">
+                                                <p>Doctor notify user to update their individual information</p>
+                                              </ion-card-content>
+                                            
+                                              <ion-row>
+                                                <ion-col>
+                                                <button ion-button icon-left clear small ion-button (click)="edit10()">
+                                                  <div>Modify</div>
+                                                </button>
+                                              </ion-col>
+                                              <ion-col>
+                                                <button ion-button icon-left clear small ion-button(click)="confirm10()">
+                                                    <div>Confirm</div>
+                                                  </button>
+                                                </ion-col>
+                                              </ion-row>
+                                            </ion-card>
+                                            <ion-card>
+                                                
+                                                  <ion-item>
+                                                    <ion-avatar>
+                                                    </ion-avatar>
+                                                    <h2>Access code distribution</h2>
+                                                    <p>Technical team</p>
+                                                  </ion-item>
+                                              
+                                                
+                                                  <ion-card-content id="id11">
+                                                    <p>Technical team check applicant's information and distribute access code.</p>
+                                                  </ion-card-content>
+                                                
+                                                  <ion-row>
+                                                    <ion-col>
+                                                      <button ion-button icon-left clear small ion-button (click)="edit11()">
+                                                        <div>Modify</div>
+                                                      </button>
+                                                    </ion-col>
+                                                    <ion-col>
+                                                      <button ion-button icon-left clear small ion-button(click)="confirm11()">
+                                                        <div>Confirm</div>
+                                                      </button>
+                                                    </ion-col>
+                                                  </ion-row>
+                                                </ion-card>
+                                                <ion-card>
+                                                      <ion-item>
+                                                        <ion-avatar>
+                                                        </ion-avatar>
+                                                        <h2>Modify description</h2>
+                                                        <p>Technical team</p>
+                                                      </ion-item>
+                                                  
+                                                    
+                                                      <ion-card-content id="id12">
+                                                        <p>Technical team modify description of funciton</p>
+                                                      </ion-card-content>
+                                                    
+                                                      <ion-row>
+                                                        <ion-col>
+                                                          <button ion-button icon-left clear small ion-button (click)="edit12()">
+                                                            <div>Modify</div>
+                                                          </button>
+                                                        </ion-col>
+                                                        <ion-col>
+                                                          <button ion-button icon-left clear small ion-button(click)="confirm12()">
+                                                            <div>Confirm</div>
+                                                          </button>
+                                                        </ion-col>
+                                                      </ion-row>
+                                                    </ion-card> -->
+
+</ion-content>

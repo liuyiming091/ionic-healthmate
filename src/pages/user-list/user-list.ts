@@ -1,3 +1,4 @@
+import { CheckStausPage } from './../check-staus/check-staus';
 import { ProfilePage } from './../profile/profile';
 import { AuthProvider } from './../../providers/auth/auth.provider';
 import { HomePage } from './../home/home';
@@ -19,8 +20,10 @@ import { MenuController } from 'ionic-angular';
   templateUrl: 'user-list.html',
 })
 export class UserListPage {
+  userId: String;
   activeMenu: String;
-  items: Array<any>=[];
+  items: Array<any>;
+  
   itemRef: firebase.database.Reference=firebase.database().ref('/userProfiles')
   constructor(public menu:MenuController, public navCtrl: NavController, public navParams: NavParams, public authProvider:AuthProvider,
   public alertCtrl:AlertController) {
@@ -38,10 +41,17 @@ export class UserListPage {
       this.items=[];
       snap.forEach( itemSnap=>{
         this.items.push(itemSnap.val());
+        //this.items.push(itemSnap.key);
         return false;
       });
     })
     console.log('ionViewDidLoad StatusPage');
+  }
+  
+  onclick(user){
+    
+    this.navCtrl.push(CheckStausPage,{'userEmail': user});
+    console.log(user);
   }
 
 }

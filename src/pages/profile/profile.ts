@@ -14,7 +14,7 @@ import { ResetPasswordPage } from '../auth/reset-password/reset-password';
   selector: 'page-profile',
   templateUrl: 'profile.html',
 })
-export class ProfilePage implements OnInit {
+export class ProfilePage {
   uid = firebase.auth().currentUser.uid;  
    
   followerCount: number;
@@ -30,6 +30,9 @@ export class ProfilePage implements OnInit {
   srcpath: string;
   path:string;
   
+  score: number;
+  generalW: number;
+  finalscore: number;
   // year: number = 1991;
 
   constructor(
@@ -44,7 +47,7 @@ export class ProfilePage implements OnInit {
   {
   }
   
-  ngOnInit() {
+  ionViewDidLoad() {
     // getUserInfo
     firebase.database().ref().child(`userProfiles/${this.uid}/profile/info`).once('value').then((snap) => {
       this.age = snap.val().age;
@@ -54,7 +57,7 @@ export class ProfilePage implements OnInit {
       this.month = snap.val().month;
       this.gender = snap.val().gender;
     });
-    firebase.database().ref().child(`userProfiles/${this.uid}/profile/image`).on('value', snap => {
+    firebase.database().ref().child(`userProfiles/${this.uid}/profile/image`).once('value', snap => {
       this.src=snap.val().filename;
       this.path ="gs://healthmate-fea30.appspot.com/profile/"+this.src;
       firebase.storage().refFromURL(`${this.path}`).getDownloadURL().then(
@@ -103,6 +106,28 @@ export class ProfilePage implements OnInit {
       this.day, 
       this.month, 
       this.gender);
+
+      firebase.database().ref().child(`/userProfiles/${this.uid}/profile/info`).once('value').then((snap) => {
+        this.height = snap.val().height;
+        this.weight = snap.val().weight;
+        this.gender = snap.val().gender;
+        if(this.gender == "m")
+        {
+          
+          this.generalW = (this.height-80)*0.7;
+          this.score = (Math.abs(this.weight-this.generalW)/this.generalW)*100;
+        }
+        else
+        {
+          this.generalW = (this.height-70)*0.6;
+          this.score = (Math.abs(this.weight-this.generalW)/this.generalW)*100;
+        }
+        this.finalscore = (100-Math.round(this.score));
+        firebase.database().ref().child(`/userProfiles/${this.uid}/profile/info/scoreRecord`).push({
+          score: this.finalscore
+        });
+      });
+
       let alert = this.alertCtrl.create({
         title: 'Your settings are saved!'
       });

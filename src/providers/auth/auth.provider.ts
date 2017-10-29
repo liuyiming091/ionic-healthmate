@@ -46,13 +46,26 @@ export class AuthProvider {
       this.verificationEmail();
       firebase.database().ref('/userProfiles').child(newUser.uid)
       .set({ email: email });
+      firebase.database().ref('/userProfiles').child(newUser.uid).child("/profile/image")
+      .set({ filename: 'CegFAMDShMdHGufC8njY2ThXExx2',
+             path: '/profile/CegFAMDShMdHGufC8njY2ThXExx2'});
       firebase.database().ref('/userProfiles').child(newUser.uid).child("/profile/info")
-      .set({age: ' ', 
-            height: ' ',
-            weight: ' ',
-            gender: ' ',
-            day: ' ',
-            month: ' '});
+      .set({age: '1', 
+            height: '140',
+            weight: '40',
+            gender: 'm',
+            day: '1',
+            month: '1'});
+      firebase.database().ref('/userProfiles').child(newUser.uid).child("/profile/info/scoreRecord")
+      .push({score: 0});
+      firebase.database().ref('/userProfiles').child(newUser.uid).child("/profile/info/scoreRecord")
+      .push({score: 0});
+      firebase.database().ref('/userProfiles').child(newUser.uid).child("/profile/info/scoreRecord")
+      .push({score: 0});
+      firebase.database().ref('/userProfiles').child(newUser.uid).child("/profile/info/scoreRecord")
+      .push({score: 0});
+      firebase.database().ref('/userProfiles').child(newUser.uid).child("/profile/info/scoreRecord")
+      .push({score: 0});
     });
   
   }
