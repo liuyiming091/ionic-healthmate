@@ -57,7 +57,7 @@ export class ProfilePage {
       this.month = snap.val().month;
       this.gender = snap.val().gender;
     });
-    firebase.database().ref().child(`userProfiles/${this.uid}/profile/image`).once('value', snap => {
+    firebase.database().ref().child(`userProfiles/${this.uid}/profile/image`).on('value', snap => {
       this.src=snap.val().filename;
       this.path ="gs://healthmate-fea30.appspot.com/profile/"+this.src;
       firebase.storage().refFromURL(`${this.path}`).getDownloadURL().then(
